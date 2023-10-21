@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 85%;
+}
+
+.caixa {
+    background-color: rgb(36, 110, 135);
+    border-radius: 15px;
+    width: 80%;
+    padding: 60px;
+    text-align: center;
+    background: linear-gradient(to top left, darkblue, lightblue);
+}
+
+.left-panel {
+    width: 40%;
+    padding: 50px;
+    background-color: darkblue;
+    background: linear-gradient(to right top, darkblue, lightblue);
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.right-panel {
+    width: 60%;
+    padding: 50px;
+    background-color: darkblue;
+    background: linear-gradient(to left top, darkblue, lightblue);
+    text-align: center;
+    height: 85%;
+}
+
+#login-button,
+#register-button {
+    width: 100%;
+    padding: 10px;
+    background-color: darkblue;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#login-button:hover,
+#register-button:hover {
+    background-color: darkblue;
+}
+
+ul.menu {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+ul.menu li {
+    margin-bottom: 10px;
+}
+
+ul.menu li a {
+    text-decoration: none;
+    color: #000000;
+    text-align: center;
+}
+
+h2 {
+    font-family: arial;
+}
+
+.tema {
+    color: lightblue;
+}
+
+.menuTema {
+    color: lightblue;
+}
+
+a:hover{
+ color: black;
+}
+
+.img{
+    text-align: center;
+}
+
+.caixaTema{
+   color: darkblue;
+}

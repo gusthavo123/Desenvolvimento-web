@@ -1,20 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #fff;
+    background: linear-gradient(to top right, rgba(0, 0, 139, 0.566), rgb(3, 77, 181));
+    
     height: 100vh;
 }
 
 .container {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 58px;
     height: 85%;
+    border-radius: 6px;
 }
 
 .caixa {
-    background-color: rgb(36, 110, 135);
     border-radius: 15px;
     width: 80%;
     padding: 60px;
@@ -33,6 +40,8 @@ body {
     justify-content: center;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius:  6px;
 }
 
 .right-panel {
@@ -42,6 +51,8 @@ body {
     background: linear-gradient(to left top, darkblue, lightblue);
     text-align: center;
     height: 85%;
+    border-top-right-radius:  6px;
+    border-bottom-right-radius: 6px;
 }
 
 #login-button,

@@ -1,0 +1,27 @@
+//é o código para conseguir acessar somente se todos os campos forem preenchidos e somente se as informações adicionadas estiverem correta
+
+function validarFormulario() {
+    var nome = document.forms["cadastro"]["nome"].value;
+    var email = document.forms["cadastro"]["email"].value;
+    var senha = document.forms["cadastro"]["senha"].value;
+
+    if (nome === '') {
+        alert('Preencha o campo Nome.');
+        document.forms["cadastro"]["nome"].focus();
+        return false;
+    }
+    
+    if (email === '') {
+        alert('Preencha o campo Email.');
+        document.forms["cadastro"]["email"].focus();
+        return false;
+    }
+
+    if (senha === '') {
+        alert('Preencha o campo Senha.');
+        document.forms["cadastro"]["senha"].focus();
+        return false;
+    }
+
+    return true;
+}

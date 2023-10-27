@@ -1,27 +1,28 @@
-//é o código para conseguir acessar somente se todos os campos forem preenchidos e somente se as informações adicionadas estiverem correta
+const form = document.querySelector("#formulario")
+const nameInput = document.querySelector("#nome")
+const email = document.querySelector ("#email")
+const passawordInput = document.querySelector ("#password")
 
-function validarFormulario() {
-    var nome = document.forms["cadastro"]["nome"].value;
-    var email = document.forms["cadastro"]["email"].value;
-    var senha = document.forms["cadastro"]["senha"].value;
+form.addEventListener ("submit", (event) => {
+      event.preventDefault();
 
-    if (nome === '') {
-        alert('Preencha o campo Nome.');
-        document.forms["cadastro"]["nome"].focus();
-        return false;
-    }
-    
-    if (email === '') {
-        alert('Preencha o campo Email.');
-        document.forms["cadastro"]["email"].focus();
-        return false;
-    }
-
-    if (senha === '') {
-        alert('Preencha o campo Senha.');
-        document.forms["cadastro"]["senha"].focus();
-        return false;
-    }
-
-    return true;
+if (nameInput.value === " "){
+  alert("Por favor, insira seu nome!");
+  return;
 }
+
+
+if (email.value === " "){
+    alert("Por favor, insira seu email!");
+    return;
+  }
+
+
+  if (passwordInput.value === " "){
+    alert("Por favor, insira sua senha!");
+    return;
+  }
+
+form.subtmit ();
+
+});

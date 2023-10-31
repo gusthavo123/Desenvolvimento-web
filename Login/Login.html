@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casdastro</title>
+    <title>Cadastro</title>
     <link rel="stylesheet" href="Login.css">
+
 </head>
 
 <body>
@@ -19,27 +20,55 @@
             <div class="login__cadastro__text">
                 <h1>Criar conta</h1>
             </div>
-            <div class="login__cadastro__form">
-                <h3>Nome completo</h3>
-                <input type="text" name="input" value="" class="inserir"/>
+                <form id="formulario" class="centralizar">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" required class="inserir">
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required class="inserir">
+                    
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" required class="inserir">
+                    
+                    <label for="confirmacaoSenha">Confirmar senha</label>
+                    <input type="password" id="confirmacaoSenha" required class="inserir">
 
-                <h3>E-mail</h3>
-                <input type="text" name="input" value="" class="inserir"/>
+                    <br> 
+                    <a href="TelaPrincipal.html" target="_blank"> <button class="botao"> Criar conta </button> </a>
 
-                <h3>Senha</h3>
-                <input type="password" name="input" value="" class="inserir"/>
-
-                <h3> Confirmar senha </h3>
-                <input type="password" name="input" value="" class="inserir"/>
-
-                <br>
-
-                <button class="inserir"> Criar </button>
-
+                </form>                
+               
+              </div>
             </div>
         </div>
     </main>
     <footer></footer>
+
+    <script> 
+        document.getElementById('Confirmar').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            var nome = document.getElementById('nome').value;
+            var email = document.getElementById('email').value;
+            var senha = document.getElementById('senha').value;
+
+            if (nome.trim() === "" || email.trim() === "" || senha.trim() === "") {
+                alert("Por favor, preencha todos os campos.");
+                return;
+            }
+
+            var emailRegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegExp.test(email)) {
+                alert("Por favor, insira um endereço de email válido.");
+                return;
+            }
+
+        window.location.replace("TelaPrincipal.html");
+
+
+        });
+    </script>
+
 </body>
 
 </html>

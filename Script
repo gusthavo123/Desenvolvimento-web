@@ -1,3 +1,6 @@
+//ignore
+
+
 const form = document.querySelector("#formulario")
 const nameInput = document.querySelector("#nome")
 const email = document.querySelector ("#email")

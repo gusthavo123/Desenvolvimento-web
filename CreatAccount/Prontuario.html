@@ -1,0 +1,42 @@
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Verificação de Receitas Médicas</title>
+        <link rel="stylesheet" href="./style/Prontuario.css">
+        <script src="./assents/Prontuario.js"></script>
+    </head>
+    <body>
+
+        <div id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li onclick="showReceitas()">Verificar Receitas</li>
+                <li onclick="markAsUsed()">Marcar como Usada</li>
+                <li onclick="showForm()">Adicionar Receita</li>
+            </ul>
+        </div>
+        
+        <div id="content">
+            <h2>Bem-vindo à Verificação de Receitas Médicas</h2>
+            <div id="receitasContainer">
+                <!-- O conteúdo das receitas será exibido aqui -->
+            </div>
+        
+            <div id="formContainer" style="display: none;">
+                <h2>Adicionar Receita</h2>
+                <form id="receitaForm">
+                    <label for="nomeMedicamento">Nome do Medicamento:</label>
+                    <input type="text" id="nomeMedicamento" name="nomeMedicamento" required><br>
+        
+                    <label for="dataVencimento">Data de Vencimento:</label>
+                    <input type="date" id="dataVencimento" name="dataVencimento" required><br>
+        
+                    <button type="button" onclick="addReceita()">Adicionar Receita</button>
+                </form>
+            </div>
+        </div>
+        
+        </body>
+    </html>

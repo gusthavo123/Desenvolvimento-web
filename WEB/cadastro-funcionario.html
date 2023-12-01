@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina</title>
+    <script src="./assents/cadastro-funcionario.js"></script>
+</head>
+<body class="cadastro-funcionario">
+    <div class="cadastro-funcionario-formulario">
+        <div class="cadastro-funcionario-formulario-barra-info">
+            <h1 class="cadastro-funcionario-formulario-barra-info-centralizar">Cadastro</h1>
+            <div class="cadastro-funcionario-formulario-barra-info-centralizar">
+                <form id="cadastro" method="post" action="/cadastrarFuncionario">
+                    <div>   
+                        <label for="nome">Nome</label>
+                        <input name="nome" type="text">
+                        <label for="nome">CPF</label>
+                        <input name="cpf" type="text">
+                        <label for="nome">RG</label>
+                        <input name="rg" type="text">
+                        <label for="nome">CNH</label>
+                        <input name="cnh" type="text">
+                        <label for="nome">Carteira de Trabalho</label>
+                        <input name="carteiraDeTrabalho" type="text">
+                        <label for="nome">Função</label>
+                        <select>
+                            <option value="medico">MEDICO</option>
+                            <option value="Farmaceutico">FARMACEUTICO</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="email">E-mail</label>
+                        <input name="email" type="text">
+                        <label for="endereco">Endereço</label>
+                        <input name="endereco" type="text">
+                        <label for="telefone">Telefone</label>
+                        <input name="telefone" type="text">
+                        <label for="senha">Senha</label>
+                        <input name="senha" type="password">
+                        <button type="button" onclick="cadastrar()">Cadastrar</button>
+                    </div>
+                    
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

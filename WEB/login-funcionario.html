@@ -1,42 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="Login.css">
-
+    <link rel="stylesheet" href="./style/login.css">
+    
+    <title>Login</title>
 </head>
-
 <body>
     <Header></Header>
     <main class="login">
         <div class="login__img">
-            <img src="login.jpeg">
+            <img src="./assents/login.jpeg">
         </div>
         <div class="login__cadastro">
             <div class="login__cadastro__text">
-                <h1>Criar conta</h1>
+                <h1>Fazer login na conta</h1>
             </div>
+            <div class="login__cadastro__form">
+
                 <form id="formulario" class="centralizar">
                     <label for="nome">Nome</label>
                     <input type="text" id="nome" required class="inserir">
                     
-                    <label for="email">Email</label>
+                    <label for="email">CRM</label>
                     <input type="email" id="email" required class="inserir">
                     
                     <label for="senha">Senha</label>
                     <input type="password" id="senha" required class="inserir">
-                    
-                    <label for="confirmacaoSenha">Confirmar senha</label>
-                    <input type="password" id="confirmacaoSenha" required class="inserir">
 
-                    <br> 
-                    <a href="./Teste.html" target="_blank"> <button class="botao"> Criar conta </button> </a>
+                    <br>
+                    <a href="./agendamento.html" target="_blank"> <button class="botao"> Acessar </button> </a>
 
                 </form>                
+              
                
               </div>
             </div>
@@ -44,31 +41,29 @@
     </main>
     <footer></footer>
 
-    <script> 
-        document.getElementById('Confirmar').addEventListener('submit', function(event) {
-            event.preventDefault(); 
-
+    <script>
+        function criarConta() {
             var nome = document.getElementById('nome').value;
             var email = document.getElementById('email').value;
             var senha = document.getElementById('senha').value;
-
+    
             if (nome.trim() === "" || email.trim() === "" || senha.trim() === "") {
-                alert("Por favor, preencha todos os campos.");
+                alert("Campo vázio.");
                 return;
             }
-
+    
             var emailRegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegExp.test(email)) {
-                alert("Por favor, insira um endereço de email válido.");
+                alert("E-mail inválido.");
                 return;
             }
 
-        window.location.replace("TelaPrincipal.html");
+           window.location.replace("Home.html");
 
-
-        });
+         }
+    
     </script>
+    
 
 </body>
-
 </html>

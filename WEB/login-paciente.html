@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/login.css">
+    
+    <title>Login</title>
+</head>
+<body>
+    <Header></Header>
+    <main class="login">
+        <div class="login__img">
+            <img src="login.jpeg">
+        </div>
+        <div class="login__cadastro">
+            <div class="login__cadastro__text">
+                <h1>Fazer login na conta</h1>
+            </div>
+            <div class="login__cadastro__form">
+
+                <form id="formulario" class="centralizar">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" required class="inserir">
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required class="inserir">
+                    
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" required class="inserir">
+
+                    <br>
+                    <a href="./Home.html" target="_blank"> <button class="botao"> Acessar </button> </a>
+
+                </form>                
+              
+               
+              </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+
+    <script>
+        function criarConta() {
+            var nome = document.getElementById('nome').value;
+            var email = document.getElementById('email').value;
+            var senha = document.getElementById('senha').value;
+    
+            if (nome.trim() === "" || email.trim() === "" || senha.trim() === "") {
+                alert("Por favor, preencha todos os campos.");
+                return;
+            }
+    
+            var emailRegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegExp.test(email)) {
+                alert("Por favor, insira um endereço de email válido.");
+                return;
+            }
+
+           window.location.replace("./Home.html");
+
+         }
+    
+    </script>
+    
+
+</body>
+</html>

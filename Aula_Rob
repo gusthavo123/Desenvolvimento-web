@@ -1,0 +1,28 @@
+<?php
+$login = $_POST['usu'];
+$senha = $_POST['sen'];
+$pdo = new PDO("mysql:host=localhost;dbname=teste", "root", "");
+$sql = "select * from usuario u where u.email_login = '{$_POST['usu']}'";
+$stmt = $pdo->prepare($sql);
+$stmt -> execute ();  
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+if (usuario['senha' == $senha]){
+$token = md5 (uniqid(mt_rand(), true));
+$idusuario = $usuario['id'];
+$sql = "insert into login_control" . "(id_usuario, token, criado, expira)" . "values" . "({$id_usuario}, {'token'}, now(), DATE_ADD(now(), INTERVAL 12 hour))";
+$stm = $pdo -> prepare($sql); 
+$stm -> execute();
+$response = [
+    "status" => "1",
+    "msg" => "Login efetuado com sucesso!",
+    "token" => $token
+];
+
+} else {
+    $response = [
+        "status" => "0",
+        "msg" => "Usuario ou senha invalido!"
+    ];
+}
+echo json_encode($response);
+?>
